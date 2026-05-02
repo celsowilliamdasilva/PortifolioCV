@@ -1,125 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portifolio </title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="nav__logo">
-            <a href="https://github.com/cwilliam956">github</a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#project">Projeto</a></li>
-          <li><a href="#experience">Experiencias</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header class="section__container header__container" id="home">
-      <img src="assets/Perfil.jpg" alt="header" />
-      <h1>Seja bem vindo<br />Ao meu <span>portifólio!</span></h1>
-      <p>   
-        Olá, meu nome é Celso William da Silva, Profissional formado em Desenvolvimento de Software Multiplataforma, com experiência em suporte técnico e sustentação de ambientes corporativos, atuando na análise, diagnóstico e resolução de incidentes em sistemas, redes e infraestrutura de TI.
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celso William — Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-Possuo experiência em atendimento a usuários, instalação, configuração e manutenção de softwares e equipamentos, além de atuação com consultas em banco de dados para análise e apoio na resolução de problemas em sistemas. Trabalho com foco em agilidade, eficiência e garantia da continuidade dos serviços, características essenciais para ambientes de suporte N2/N3.
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
 
-Minha trajetória anterior na área comercial contribuiu para o desenvolvimento de habilidades sólidas de comunicação, negociação e entendimento das necessidades do negócio, permitindo uma atuação mais estratégica e orientada a resultados dentro da área de tecnologia.
-      </p>
-      <div class="header__btns">
-        <button class="btn">Entre em contato</button>
-        <a href="assets/CV William.pdf" download>Download CV</a>
-      </div>
-    </header>
-
-    <section class="section__container skill__container">
-      <h2>CONHECIMENTO EM</h2>
-      <ul class="skill__flex">
-        <li>
-          <span><i class="ri-javascript-fill"></i></span>
-        </li>
-        <li>
-          <span><i class="ri-html5-fill"></i></span>
-        </li>
-      
-        <li>
-          <span><i class="ri-reactjs-line"></i></span>
-        </li>
-        <li>
-          <span><i class="ri-database-2-fill"></i></span>
-        </li>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">CW<span>.</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" data-label="01">Início</a></li>
+        <li><a href="#projects" data-label="02">Projetos</a></li>
+        <li><a href="#about" data-label="03">Sobre</a></li>
+        <li><a href="#contact" data-label="04">Contato</a></li>
       </ul>
-    </section>
+    </div>
+  </nav>
 
-    <section class="section__container project__container" id="project">
-      <h2>Projetos</h2>
-      <div class="project__grid">
-        <div class="project__card">
-          <img src="assets/samrt.jpg" alt="project" />
-          <div class="project__card__details">
-            <div>
-              <p>Smart parking </p>
-              <h4> Desenvolvimento de protótipo de um sistema inteligente de gestão de vagas de estacionamento em ambientes urbanos, utilizando análise de dados com Python, Internet das Coisas (IoT) e outras tecnologias avançadas. O sistema visa otimizar o uso do espaço público e melhorar a qualidade de vida dos habitantes da região, permitindo o monitoramento em tempo real da disponibilidade de vagas através de um aplicativo móvel intuitivo. </h4>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-text">DEV</div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Disponível para oportunidades</div>
+      <h1 class="hero-title reveal">
+        <span class="line">Celso</span>
+        <span class="line accent">William</span>
+        <span class="line">da Silva</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Desenvolvedor de Software Multiplataforma<br>
+        & Especialista em Suporte N2/N3
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn-primary">Entre em contato <i class="ri-arrow-right-up-line"></i></a>
+        <a href="assets/CV William.pdf" download class="btn-ghost">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="photo-wrap">
+        <img src="assets/Perfil.jpg" alt="Celso William" />
+        <div class="photo-border"></div>
+      </div>
+      <div class="skills-pill-wrap">
+        <span class="skill-pill"><i class="ri-javascript-fill"></i> JavaScript</span>
+        <span class="skill-pill"><i class="ri-html5-fill"></i> HTML5</span>
+        <span class="skill-pill"><i class="ri-reactjs-line"></i> React</span>
+        <span class="skill-pill"><i class="ri-database-2-fill"></i> SQL</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band">
+    <div class="marquee-track">
+      <span>Suporte Técnico</span><span>•</span>
+      <span>Desenvolvimento Web</span><span>•</span>
+      <span>Banco de Dados</span><span>•</span>
+      <span>React</span><span>•</span>
+      <span>Infraestrutura TI</span><span>•</span>
+      <span>JavaScript</span><span>•</span>
+      <span>Suporte Técnico</span><span>•</span>
+      <span>Desenvolvimento Web</span><span>•</span>
+      <span>Banco de Dados</span><span>•</span>
+      <span>React</span><span>•</span>
+      <span>Infraestrutura TI</span><span>•</span>
+      <span>JavaScript</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">02 — Projetos</p>
+        <h2>Trabalhos <em>selecionados</em></h2>
+      </div>
+      <div class="projects-list">
+
+        <article class="project-item reveal">
+          <div class="project-num">01</div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span>IoT</span><span>Python</span><span>Mobile</span>
             </div>
-            <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+            <h3>Smart Parking</h3>
+            <p>Protótipo de sistema inteligente de gestão de vagas de estacionamento em ambientes urbanos, com análise de dados via Python e Internet das Coisas. Monitoramento em tempo real através de app móvel intuitivo.</p>
+            <a href="#" class="project-link">Ver projeto <i class="ri-arrow-right-up-line"></i></a>
+          </div>
+          <div class="project-thumb">
+            <img src="assets/samrt.jpg" alt="Smart Parking" />
+          </div>
+        </article>
+
+        <article class="project-item mobile-screenshot reveal">
+          <div class="project-num">02</div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span>Mobile</span><span>Web</span><span>Previsão de Vendas</span><span>IA</span>
+            </div>
+            <h3>Tech Finance</h3>
+            <p>Aplicação multiplataforma (mobile + web) para gerenciar produtos, vendas e clientes com relatórios detalhados. Conta com previsão e simulação de vendas futuras, insights estratégicos e o assistente virtual Dinho Bot.</p>
+            <a href="#" class="project-link">Ver projeto <i class="ri-arrow-right-up-line"></i></a>
+          </div>
+          <div class="project-thumb">
+            <img src="assets/techfinance.jpg" alt="Tech Finance" />
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <p class="section-tag">03 — Sobre</p>
+          <div class="about-decoration">
+            <div class="deco-circle"></div>
+            <div class="deco-line"></div>
           </div>
         </div>
-        <div class="project__card">
-          <img src="assets/techfinance.jpg" alt="project" />
-          <div class="project__card__details">
-            <div>z
-              <p>Tech Finance</p>
-              <h4>O techfinance é uma aplicação desenvolvida para gerenciar produtos, vendas, clientes e gerar relatórios detalhados sobre essas áreas. A aplicação inclui funcionalidades como visualização de detalhes de produtos e clientes, insights sobre vendas e produtos, e um assistente virtual chamado Dinho Bot.</h4>
+        <div class="about-text reveal">
+          <h2>Em busca de experiências em <em>desenvolvimento</em></h2>
+          <p>Profissional formado em Desenvolvimento de Software Multiplataforma, com experiência em suporte técnico e sustentação de ambientes corporativos, atuando na análise, diagnóstico e resolução de incidentes em sistemas, redes e infraestrutura de TI.</p>
+          <p>Possuo experiência em atendimento a usuários, instalação, configuração e manutenção de softwares e equipamentos, além de consultas em banco de dados para análise e resolução de problemas em sistemas.</p>
+          <p>Minha trajetória anterior na área comercial contribuiu para habilidades sólidas de comunicação, negociação e entendimento das necessidades do negócio — permitindo uma atuação mais estratégica dentro da TI.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <strong>N2/N3</strong>
+              <span>Suporte</span>
             </div>
-            <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+            <div class="stat">
+              <strong>2+</strong>
+              <span>Projetos</span>
+            </div>
+            <div class="stat">
+              <strong>Full</strong>
+              <span>Stack</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section__container experience__container" id="experience">
-      <h2>EM BUSCA DE EXPERIENCIAS VOLTADDAS PARA ÁREA DE DESENVOLVIMENTO </h2>
-
-    <footer>
-      <div class="section__container footer__container" id="contact">
-        <h2>Contato</h2>
-        <p>
-          Se você tem um projeto em mente, uma
-          pergunta sobre meu trabalho ou apenas quer se conectar, sinta-se à vontade para entrar
-          em contato. Você pode entrar em contato comigo por e-mail ou pelos meus canais de mídia social.
-          Estou sempre aberto para colaborar e explorar novas oportunidades.
-        </p>
-        <div class="mail__to">
-          <a href="swilliam956@gmail.com">
-            <span><i class="ri-mail-line"></i></span>
-            swilliam956@gmail.com
+  <!-- CONTACT -->
+  <section id="contact" class="contact section-pad">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="section-tag">04 — Contato</p>
+        <h2>Vamos <em>conversar?</em></h2>
+        <p class="contact-sub">Se você tem um projeto em mente, uma pergunta sobre meu trabalho ou apenas quer se conectar — estou sempre aberto para colaborar e explorar novas oportunidades.</p>
+        <a href="mailto:swilliam956@gmail.com" class="contact-email">
+          swilliam956@gmail.com
+          <i class="ri-arrow-right-up-line"></i>
+        </a>
+        <div class="contact-socials">
+          <a href="https://github.com/celsowilliamdasilva" target="_blank">
+            <i class="ri-github-fill"></i> GitHub
+          </a>
+          <a href="https://www.instagram.com/celso_william/" target="_blank">
+            <i class="ri-instagram-fill"></i> Instagram
+          </a>
+          <a href="https://github.com/cwilliam956" target="_blank">
+            <i class="ri-code-s-slash-line"></i> Projects
           </a>
         </div>
-        <ul class="footer__socials">
-          <li>
-            <a href="https://github.com/celsowilliamdasilva"><i class="ri-github-fill"></i></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/celso_william/"><i class="ri-instagram-fill"></i></a>
-          </li>
-        </ul>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-  </body>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Celso William da Silva</p>
+      <p>Desenvolvido com dedicação</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
